@@ -26,6 +26,7 @@ class Node:
         if self.next_node is None:
             return self.data.price
         return self.data.price  + self.next_node.calculate_price()
+
 test = Node("A1",Node("B",Node("A2")))
 print(test)
 result = test.count()

@@ -63,7 +63,7 @@ class Linkedlist:
             if current.data == target_value:
                 return current
             current = current.next_node
-        return current.next_node
+        return None
     
     def count(self):
         return self.head.count()
@@ -101,7 +101,7 @@ class Linkedlist:
         while current is not None:
             print(f"go in to the loop, current = {current},current.data = {current.data},count= {count}")
             if current.data == target:
-                print(f"go in to if,current.data={current.data},count={count}")
+                print(f"go in to if check,current.data={current.data},count={count}")
                 last_index = count
                 print(f"last_index updated to{last_index}")
             current = current.next_node
@@ -128,7 +128,7 @@ class Linkedlist:
         return new_ll
     
   
-''' 
+
 ll = Linkedlist()
 ll.add_to_front(Book("Lake of Souls", False))
 ll.add_to_front(Book("Intro to Python",True))
@@ -139,20 +139,20 @@ ll.add_to_front(Book("Destroy all humans", True))
 ll.add_to_front(Book("A", True))
 ll.add_to_front(Book("B", True))
 ll.add_to_front(Book("C", True))
-#print(ll.calc_price())
-#print(ll.count())
-#item = ll.find("A")
-#print(item)
+print(ll.calc_price())
+print(ll.count())
+item = ll.find("A")
+print(item)
 paperback = lambda node: True if node.data.is_paper else False
 new_ll = ll.iterative_filter(paperback)
 print(new_ll)
-'''
+
 ll2 = Linkedlist()
 ll2.add_to_front("D")
 ll2.add_to_front("C")
 ll2.add_to_front("B")
 ll2.add_to_front("A")
-'''
+
 result = ll2.find_first_index("D")
 result_last = ll2.find_last_index("D")
 print("find the first D")
@@ -160,10 +160,7 @@ print(result)
 print("find the last D")
 print(result_last)
 print(ll2.is_loop())
-'''
+
 print(ll2)
 ll2.start_new("C")
 print(ll2)
-
-
-
